@@ -1,4 +1,3 @@
-// Масив зображень
 const images = [
   {
     preview:
@@ -63,14 +62,11 @@ const images = [
       'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg',
     description: 'Lighthouse Coast Sea',
   },
-  // Інші об'єкти
 ];
 
-// Імпорт бібліотеки SimpleLightbox та її стилів
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-// Створення розмітки галереї
 const gallery = document.querySelector('.gallery');
 const markup = images
   .map(
@@ -90,9 +86,8 @@ const markup = images
 
 gallery.insertAdjacentHTML('beforeend', markup);
 
-// Ініціалізація SimpleLightbox
 const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt', // Джерело підписів - атрибут alt
-  captionDelay: 250, // Затримка 250 мс
-  captionPosition: 'bottom', // Підпис знизу
+  captionsData: 'alt',
+  captionDelay: 250,
+  captionPosition: 'bottom',
 });
